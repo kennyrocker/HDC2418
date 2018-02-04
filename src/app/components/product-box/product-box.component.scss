@@ -1,0 +1,34 @@
+// Overwrite global
+.overall-container{
+    width: auto !important;
+    height: auto !important;
+}
+.product-box-wrapper {
+    display: flex;
+}
+.hdca-product-box-container {
+    -ms-flex-basis: 25%;
+    flex-basis: 25%; 
+}
+// Tablet
+@media (min-width: 768px) and (max-width: 1024px) {
+    .product-box-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hdca-product-box-container {
+        -ms-flex-basis: 33.3333333333%;
+        flex-basis: 33.3333333333%; 
+    }
+}
+// Mobile
+@media (max-width: 767px) {
+    .product-box-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .hdca-product-box-container {
+        -ms-flex-basis: 50%;
+        flex-basis: 50%; 
+    }
+}

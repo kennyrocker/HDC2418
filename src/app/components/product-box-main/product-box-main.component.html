@@ -1,0 +1,32 @@
+<section class="hdca-product-box__main">
+    <div class="hdca-product-box__main-info">
+      <link itemprop="url" href="this.sanitizer.bypassSecurityTrustHtml(this.data.url)"/>
+      <div class="hdca-product-box__main-info-label">
+        <span class="hdca-product-box__main-info-label-entry hdca-product-box__main-info-label-entry--brand" itemprop="manufacturer">{{this.data.manufacturer}}</span>
+        <span class="hdca-product-box__main-info-label-entry" itemprop="name">{{this.data.name}}</span>
+      </div>
+      <div class="hdca-product-box__main-info-detail">
+        <div class="hdca-product-box__main-info-detail-entry">Model #
+          <span itemprop="model">{{this.data.model}}</span>
+        </div>
+        <div class="hdca-product-box__main-info-detail-entry">SKU #
+          <span itemprop="sku">{{this.data.sku}}</span>
+        </div>
+      </div>
+    </div>
+    <div class="hdca-product-box__main-purchase">
+      <div class="hdca-product-box__main-purchase-price" itemprop="offers" itemscope="" itemtype="http://schema.org/Offer">
+        <span itemprop="priceCurrency" content="CAD"></span>
+        <link itemprop="itemCondition" href="http://schema.org/NewCondition" content="New" />
+        <div class="hdca-product-box__main-purchase-price-entry">
+          <span class="hdca-product-box__main-purchase-price-entry-content hdca-product-box__main-purchase-price-entry-content--primary">{{this.data.priceCurrency}}
+            <span itemprop="price">{{this.data.price}}</span>
+          </span>
+          <span class="hdca-product-box__main-purchase-price-entry-content">{{this.data.unit}}</span>
+        </div>
+      </div>
+      <div class="hdca-product-box__main-purchase-action">
+        <button class="hdca-button hdca-product-box__main-purchase-action-item hdca-button--secondary hdca-button--large">View Details</button>
+      </div>
+    </div>
+</section>

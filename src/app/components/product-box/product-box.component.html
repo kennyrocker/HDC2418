@@ -1,0 +1,16 @@
+
+<div class="product-box-wrapper">
+    <div *ngIf="!this.products">Loading Product Data...</div>
+    <div *ngFor="let product of this.products" class="hdca-product-box-container overall-container" itemscope="" itemtype="http://schema.org/Product">
+      <article class="hdca-product-box">
+        <div class="product-wrapper">
+            <app-product-box-header [id]="product.id" [image]="product.image"></app-product-box-header>
+            <app-product-box-main [data]="product"></app-product-box-main>
+        </div>
+      </article>
+  </div> 
+</div>
+   
+
+
+
