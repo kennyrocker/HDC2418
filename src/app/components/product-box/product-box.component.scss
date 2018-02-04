@@ -6,6 +6,9 @@
 .product-box-wrapper {
     display: flex;
 }
+.product-box-wrapper.hide{
+    flex-direction: column;
+}
 .hdca-product-box-container {
     -ms-flex-basis: 25%;
     flex-basis: 25%; 

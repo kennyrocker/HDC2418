@@ -1,19 +1,14 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-product-box-main',
   templateUrl: './product-box-main.component.html',
-  styleUrls: ['./product-box-main.component.scss']
+  styles: []
 })
-export class ProductBoxMainComponent implements OnInit {
+export class ProductBoxMainComponent {
 
   @Input() data;
   constructor(public sanitizer: DomSanitizer) {
   }
-
-  ngOnInit() {
-    console.log(this.data.url);
-  }
-
 }

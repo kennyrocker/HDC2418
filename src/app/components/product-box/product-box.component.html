@@ -1,5 +1,9 @@
 
-<div class="product-box-wrapper">
+<button (click)="displayOnePerRow = !displayOnePerRow" class="hdca-button hdca-button--secondary hdca-button--large">
+  <span *ngIf="!displayOnePerRow">View One Item Per Row</span>
+  <span *ngIf="displayOnePerRow">View Full Row </span>
+</button>
+<div class="product-box-wrapper" [ngClass]="{hide: displayOnePerRow, show: !displayOnePerRow}">
     <div *ngIf="!this.products">Loading Product Data...</div>
     <div *ngFor="let product of this.products" class="hdca-product-box-container overall-container" itemscope="" itemtype="http://schema.org/Product">
       <article class="hdca-product-box">
@@ -8,7 +12,7 @@
             <app-product-box-main [data]="product"></app-product-box-main>
         </div>
       </article>
-  </div> 
+  </div>
 </div>
    
 

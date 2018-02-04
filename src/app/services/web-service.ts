@@ -76,7 +76,23 @@ export class WebService {
               'itemConditionHref':'http://schema.org/NewCondition',
               'price':'34.00',
               'unit': '/ case'
-            }
+            },
+            {
+                'id' : '103',
+                'image' : 'assets/images/products/product_1.jpg',
+                'url': '#',
+                'manufacturer' : 'Home Decorators Collection',
+                'name': '12mm Wintour Maple Classic Laminate Flooring (17.26 sq. ...',
+                'model': '7L12X165/8045CL',
+                'sku':'1001002632',
+                'offersScope':'',
+                'offersType':'http://schema.org/Offer',
+                'priceCurrency':'$',
+                'itemCondition':'New',
+                'itemConditionHref':'http://schema.org/NewCondition',
+                'price':'34.00',
+                'unit': '/ case'
+              }
         ];
     }
 }

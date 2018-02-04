@@ -10,13 +10,13 @@ import { WebService } from 'app/services/web-service';
 
 export class ProductBoxComponent {
 
+  public displayOnePerRow: boolean;
   public maxProductDisplay: number;
   public allProducts: any;
   public products: any;
 
   constructor(private webServie: WebService) {}
 
-  // tslint:disable-next-line:use-life-cycle-interface
   ngOnInit(): void {
     // this.webServie.getItemCount().subscribe((response: any) =>{
     //     this.maxProductDisplay = response;
@@ -37,5 +37,4 @@ export class ProductBoxComponent {
       return allProducts.splice(0, maxDisplay);
     }
   }
-
 }
