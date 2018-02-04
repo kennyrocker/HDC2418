@@ -23,18 +23,16 @@ export class ProductBoxComponent {
     // });
     this.maxProductDisplay = this.webServie.getItemCount();
     this.allProducts = this.webServie.getProducts();
-    if(this.maxProductDisplay > 0){
-      this.products = this.filterProducts(this.maxProductDisplay, this.allProducts);
-    } else {
-      this.products = [];
-    }
+    this.products = this.filterProducts(this.maxProductDisplay, this.allProducts);
   }
 
-  private filterProducts(maxDisplay: number, allProducts: any): any {
+  public filterProducts(maxDisplay: number, allProducts: any): any {
     if (allProducts.length <= maxDisplay) {
       return allProducts;
-    } else {
-      return allProducts.splice(0, maxDisplay);
     }
+    if (maxDisplay === 0) {
+      return [];
+    }
+    return allProducts.splice(0, maxDisplay);
   }
 }

@@ -11,17 +11,17 @@ export class WebService {
 
     constructor(private http: Http) {}
 
-    // public getItemCount(): Observable<any> {
+    // public getItemCount(): Observable<Number> {
     //     this.dest = `${this.API_BASE_URL}/itemCount`;
     //     // mock return
     //     return this.http.get(this.dest).map((res) => res.json());
     // }
 
     // mock item count
-    public getItemCount(): any {
+    public getItemCount(): number {
         this.dest = `${this.API_BASE_URL}/itemCount`;
         // mock return
-        return 5;
+        return 4;
     }
 
     // Mock getProduct Service

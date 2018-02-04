@@ -1,25 +1,19 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { WebService } from './web-service';
+import { Http } from '@angular/http';
 
 describe('ProductBoxMainComponent', () => {
   let component: WebService;
-  let fixture: ComponentFixture<WebService>;
+  let http: Http;
+  component = new WebService(http);
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ WebService ]
-    })
-    .compileComponents();
-  }));
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(WebService);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+  it('getItemCount should return number greater than 0', () => {
+      let res: Number = component.getItemCount();
+      expect(res).toBeGreaterThan(0);
   });
 
-  // it('should create', () => {
-  //   expect(component).toBeTruthy();
-  // });
+  it('getProducts should return more than 0 product object in an array', () => {
+      let res: any = component.getProducts();
+      expect(res.length).toBeGreaterThanOrEqual(0);
+  });
+
 });
